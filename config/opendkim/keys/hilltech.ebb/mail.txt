@@ -1,0 +1,3 @@
+mail._domainkey	IN	TXT	( "v=DKIM1; h=sha256; k=rsa; "
+	  "p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAsNAEmyG+yhGIN0RGqhns8rrYyCA8z5PUik0ExifXENghUQGJx2DE9QB7ZdrhZkjH20IJE6pT8JKATwwd7tHVCRndH+OrherBeLEcDujO3CjDV0hiUpVQlASK150Kj98t+BGTjtOux/Y6e1Y4G3nIPWhS1f5Fa7d1ykqOibIhHuJsBixFbm3FZguENCnudI7avxutb54GpcldDC"
+	  "uay0mGuiFGqKbyWUVP+6oa4DLOxvx4PeievzcwPtlhLGIt06Fzkxl7Epv6J0diEpHDAuZMTnuMkP8R0kxd/q05WgiazCfyumUiXaZPK39SDCY0yjxR1HWfVjjDwQP35ER3Kl9gFQIDAQAB" )  ; ----- DKIM key mail for hilltech.ebb

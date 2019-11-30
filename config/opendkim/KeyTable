@@ -1,0 +1,1 @@
+mail._domainkey.hilltech.ebb hilltech.ebb:mail:/etc/opendkim/keys/hilltech.ebb/mail.private
