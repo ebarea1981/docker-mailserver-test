@@ -1,5 +1,17 @@
-version: '2'
+version: '3'
 services:
+  rainloop:
+    image: hardware/rainloop
+    container_name: rainloop
+    networks:
+      - libregob-network
+      - pymedigital_libregob-network
+    links:
+      - mail
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./data/rainloop:/rainloop/data
   mail:
     image: tvial/docker-mailserver:latest
     hostname: ${HOSTNAME}
@@ -22,6 +34,24 @@ services:
     - NET_ADMIN
     - SYS_PTRACE
     restart: always
+    networks:
+      - libregob-network
+      - pymedigital_libregob-network
+  # entry:
+  #   image: abiosoft/caddy:0.10.4
+  #   networks:
+  #     - libregob-network
+  #     - pymedigital_libregob-network
+  #   restart: always
+  #   privileged: true
+  #   links:
+  #     - rainloop
+  #   ports:
+  #     - "8080:80"
+  #     - "443:443"
+  #   volumes:
+  #     - ./entry/Caddyfile:/etc/Caddyfile
+  #     - ./data/entry:/root/.caddy
 volumes:
   maildata:
     driver: local
@@ -29,3 +59,11 @@ volumes:
     driver: local
   maillogs:
     driver: local
+
+networks:
+ libregob-network:
+   external:
+     name: libregob-network
+ pymedigital_libregob-network:
+   external:
+     name: pymedigital_libregob-network

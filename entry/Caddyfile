@@ -1,0 +1,5 @@
+http://localhost {
+    proxy / rainloop:8888 {
+        transparent
+    }
+}
